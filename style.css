@@ -1,0 +1,231 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url(./images/poolofwater.jpg);
+}
+/* Basic Styling */
+.navbar {
+  background-color: #333;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between; /* Change this from space-evenly to space-between */
+  height: auto;
+  width: 100%; /* Change this from auto to 100% */
+  padding: 10px;
+}
+
+.navbar ul {
+  display: flex; /* Keep this as flex */
+  justify-content: space-around; /* Change this from center to space-around */
+  align-items: center; /* Keep this as center */
+  color: #f2f2f2;
+  padding: 14px 16px;
+  text-decoration: none;
+  width: 100%; /* Add this to make the ul take up the full width of the navbar */
+}
+
+/* Add this to your existing CSS */
+
+.navbar .logo {
+  display: flex; /* Change this from block to flex */
+  flex-direction: column; /* Stack the children vertically */
+  align-items: center; /* Center the children horizontally */
+  justify-content: center; /* Center the children vertically */
+  color: #64b4f7;
+  font: 1em sans-serif;
+}
+
+.navbar li {
+  list-style-type: none;
+  color: white;
+  margin: 20px;
+  display: flex;
+}
+
+.dropdown {
+  position: relative; /* Change this from float to position */
+  row-gap: 15px;
+}
+
+.dropdown .dropdown-content {
+  display: none;
+  position: absolute;
+
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  background-color: #f7d9d9;
+  margin: 5px;
+  justify-content: center;
+}
+ul,
+li {
+  justify-content: center;
+  row-gap: 10px;
+}
+/* Add this to your existing CSS */
+
+.dropdown:hover .dropdown-content {
+  display: flex;
+}
+
+.dropdown-content a:hover {
+  background-color: #f7d9d9;
+  color: black;
+}
+
+/* Style for the "close" menu icon */
+.menu-icon.close {
+  float: right;
+  padding: 14px 16px;
+  cursor: pointer;
+}
+
+.show {
+  display: block !important;
+}
+.button {
+  width: 25px;
+  border-radius: 15px;
+}
+img {
+  width: 70px;
+  margin: 20px;
+}
+h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin: 20px 0;
+  text-align: center;
+}
+
+.container {
+  position: relative;
+  background-color: #020c2e;
+  color: #fcfbfb;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+
+  font-size: 2rem;
+  box-shadow: 2px 4px 5px 0 #bdbdbd;
+  box-sizing: border-box;
+  border-radius: 15px;
+  border: solid rgb(12, 12, 12);
+}
+
+input {
+  width: 100%;
+  margin: 5px 0;
+  padding: 10px;
+  font-size: 1.6rem; /* Slightly reduce font size for input elements */
+}
+
+p {
+  font-size: 1.8rem; /* Adjust font size for better readability */
+  color: #ff0404; /* Use a more readable red color */
+  text-align: center;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 1.8rem;
+  color: #db6707; /* Use an easier-to-read orange color */
+}
+
+button {
+  width: 100%;
+  background-color: #009688;
+  color: white;
+  border: none;
+  padding: 10px;
+  margin-top: 10px;
+  cursor: pointer;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+#SIAns,
+.ToRAns,
+.FRAns,
+.yardAns,
+.meterAns,
+.galAns,
+.FAns,
+.TRAns,
+.RAns,
+.ARAns,
+.ACAns,
+.CAns {
+  background-color: darkgrey;
+  color: #000;
+  padding: 10px;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 10px;
+  font-size: 1.6rem; /* Adjust font size for better readability */
+}
+
+
+
+footer {
+  display: flex;
+  box-sizing: border-box;
+  margin-top: 0px;
+  width: 100%;
+  padding: 5px;
+  height: auto;
+  background-color: #b4f72d;
+  font-size: x-large;
+  color: #23211e;
+}
+ul {
+  display: flex;
+  list-style: none;
+  justify-content: space-evenly;
+  margin-left: 30px;
+  justify-content: center;
+}
+li {
+  margin: 25px;
+  justify-items: center;
+}
+
+/* Media query for screens with a max width of 768px */
+@media screen and (max-width: 768px) {
+  .container {
+    width: 95%;
+    font-size: 1.4rem; /* Slightly reduce font size for smaller screens */
+  }
+}
+/* Responsive Styling */
+@media screen and (max-width: 600px) {
+  .navbar,
+  .navbar a,
+  .dropdown {
+    width: 100%;
+    display: flex;
+    flex-direction: column; /* Add this to stack items vertically */
+    box-sizing: border-box;
+  }
+
+  .navbar ul {
+    flex-direction: column; /* Add this to stack items vertically */
+  }
+
+  .navbar li {
+    margin: 10px 0; /* Adjust this to add vertical spacing between items */
+  }
+}
