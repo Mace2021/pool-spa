@@ -285,38 +285,18 @@ document.addEventListener("DOMContentLoaded", function () {
     .addEventListener("click", calculateSI);
 });
 
-// Get all the dropdown elements
+// Get all the dropdown buttons
 var dropdowns = document.getElementsByClassName("dropdown");
 
-// Loop through each dropdown
-for (let i = 0; i < dropdowns.length; i++) {
-  // Add a click event listener
-  dropdowns[i].addEventListener("click", function () {
-    // Get the dropdown content
-    var dropdownContent = this.children[1];
-    // If the dropdown content is shown, hide it. Otherwise, show it.
-    if (dropdownContent.style.display === "flex") {
-      dropdownContent.style.display = "none";
-    } else {
-      dropdownContent.style.display = "flex";
-    }
+// Loop through each dropdown button
+for (var i = 0; i < dropdowns.length; i++) {
+  // When the user hovers over a dropdown button, show its dropdown content
+  dropdowns[i].addEventListener("mouseover", function() {
+    this.children[1].style.display = "flex";
+  });
+
+  // When the user stops hovering over a dropdown button, hide its dropdown content
+  dropdowns[i].addEventListener("mouseout", function() {
+    this.children[1].style.display = "none";
   });
 }
-
-// Add a resize event listener to the window
-window.addEventListener("resize", function () {
-  // If the window width is greater than 600px, show all dropdown contents
-  if (window.innerWidth > 600) {
-    for (let i = 0; i < dropdowns.length; i++) {
-      var dropdownContent = dropdowns[i].children[1];
-      dropdownContent.style.display = "flex";
-    }
-  }
-  // If the window width is less than or equal to 600px, hide all dropdown contents
-  else {
-    for (let i = 0; i < dropdowns.length; i++) {
-      var dropdownContent = dropdowns[i].children[1];
-      dropdownContent.style.display = "none";
-    }
-  }
-});
