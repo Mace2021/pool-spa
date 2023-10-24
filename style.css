@@ -9,100 +9,48 @@ body {
   padding: 0;
   background-image: url(./images/poolofwater.jpg);
 }
-/* Basic Styling */
 .navbar {
   background-color: #333;
-  overflow: hidden;
   display: flex;
-  justify-content: space-between; /* Change this from space-evenly to space-between */
-  height: auto;
-  width: 100%; /* Change this from auto to 100% */
+  justify-content: space-between;
   padding: 10px;
 }
 
+.navbar .logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #64b4f7;
+}
+
 .navbar ul {
-  display: flex; /* Keep this as flex */
-  justify-content: space-around; /* Change this from center to space-around */
-  align-items: center; /* Keep this as center */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
   color: #f2f2f2;
   padding: 14px 16px;
   text-decoration: none;
-  width: 100%; /* Add this to make the ul take up the full width of the navbar */
-}
-
-/* Add this to your existing CSS */
-
-.navbar .logo {
-  display: flex; /* Change this from block to flex */
-  flex-direction: column; /* Stack the children vertically */
-  align-items: center; /* Center the children horizontally */
-  justify-content: center; /* Center the children vertically */
-  color: #64b4f7;
-  font: 1em sans-serif;
 }
 
 .navbar li {
   list-style-type: none;
   color: white;
-  margin: 20px;
-  display: flex;
 }
 
 .dropdown {
-  position: relative; /* Change this from float to position */
-  row-gap: 15px;
+  position: relative;
 }
 
 .dropdown .dropdown-content {
   display: none;
   position: absolute;
-
   min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 }
-
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  background-color: #f7d9d9;
-  margin: 5px;
-  justify-content: center;
-}
-ul,
-li {
-  justify-content: center;
-  row-gap: 10px;
-}
-/* Add this to your existing CSS */
 
 .dropdown:hover .dropdown-content {
   display: flex;
 }
 
-.dropdown-content a:hover {
-  background-color: #f7d9d9;
-  color: black;
-}
-
-/* Style for the "close" menu icon */
-.menu-icon.close {
-  float: right;
-  padding: 14px 16px;
-  cursor: pointer;
-}
-
-.show {
-  display: block !important;
-}
-.button {
-  width: 25px;
-  border-radius: 15px;
-}
-img {
-  width: 70px;
-  margin: 20px;
-}
 h2 {
   text-align: center;
   font-size: 2rem;
