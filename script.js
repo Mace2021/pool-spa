@@ -285,18 +285,3 @@ document.addEventListener("DOMContentLoaded", function () {
     .addEventListener("click", calculateSI);
 });
 
-// Get all the dropdown buttons
-var dropdowns = document.getElementsByClassName("dropdown");
-
-// Loop through each dropdown button
-for (var i = 0; i < dropdowns.length; i++) {
-  // When the user hovers over a dropdown button, show its dropdown content
-  dropdowns[i].addEventListener("mouseover", function() {
-    this.children[1].style.display = "flex";
-  });
-
-  // When the user stops hovering over a dropdown button, hide its dropdown content
-  dropdowns[i].addEventListener("mouseout", function() {
-    this.children[1].style.display = "none";
-  });
-}
