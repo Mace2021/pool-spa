@@ -51,6 +51,24 @@ body {
   display: flex;
 }
 
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  background-color: #f7d9d9; /* Existing background color */
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd; /* New hover color */
+}
+
+@media screen and (max-width:600px) {
+    .navbar ul {
+        flex-direction: column; /* Stack the links vertically on small screens */
+    }
+}
+
+
 h2 {
   text-align: center;
   font-size: 2rem;
@@ -158,24 +176,5 @@ li {
   .container {
     width: 95%;
     font-size: 1.4rem; /* Slightly reduce font size for smaller screens */
-  }
-}
-/* Responsive Styling */
-@media screen and (max-width: 600px) {
-  .navbar,
-  .navbar a,
-  .dropdown {
-    width: 100%;
-    display: flex;
-    flex-direction: column; /* Add this to stack items vertically */
-    box-sizing: border-box;
-  }
-
-  .navbar ul {
-    flex-direction: column; /* Add this to stack items vertically */
-  }
-
-  .navbar li {
-    margin: 10px 0; /* Adjust this to add vertical spacing between items */
   }
 }
