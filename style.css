@@ -66,6 +66,9 @@ body {
     .navbar ul {
         flex-direction: column; /* Stack the links vertically on small screens */
     }
+    .navbar{
+      display: inline-block;
+    }
 }
 
 
