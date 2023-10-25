@@ -148,7 +148,21 @@ button {
   margin-top: 10px;
   font-size: 1.6rem; /* Adjust font size for better readability */
 }
+iframe{
+  position: relative;
+  background-color: #020c2e;
+  color: #fcfbfb;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
 
+  font-size: 2rem;
+  box-shadow: 2px 4px 5px 0 #bdbdbd;
+  box-sizing: border-box;
+  border-radius: 15px;
+  border: solid rgb(12, 12, 12);
+}
 
 
 footer {
