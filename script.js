@@ -40,7 +40,7 @@ function circle_pool_vol() {
 
   document.getElementById("CPVAns").innerText =
     "Pool Volume: " + poolvol.toFixed(2) + " gallons";
-  resetInputFields();
+  resetInputFields(); 
 }
 
 function calculateArea() {
