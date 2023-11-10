@@ -276,7 +276,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Helper function to display the SI
   function displaySI(SI) {
-    document.getElementById("SIAns").innerText = SI.toString().toFixed(2);
+    document.getElementById("SIAns").innerText = (SI.toString()).toFixed(2);
   }
 
   // Attach click handler to the button
