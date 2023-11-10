@@ -268,7 +268,7 @@ document.addEventListener("DOMContentLoaded", function () {
       temperatureFactor -
       TDSFactors;
 
-    displaySI(SI);
+    displaySI(SI.toFixed(2));
 
     // Reset input fields after displaying SI
     resetInputFields();
@@ -276,7 +276,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Helper function to display the SI
   function displaySI(SI) {
-    document.getElementById("SIAns").innerText = SI.toString();
+    document.getElementById("SIAns").innerText = SI.toString().toFixed(2);
   }
 
   // Attach click handler to the button
