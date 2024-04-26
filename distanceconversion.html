@@ -5,7 +5,116 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style.css" />
     <title>Pool&Spa Calculations</title>
+<style>
+ body {
+  margin: 0;
+  padding: 0;
+  background-image: url(./images/poolofwater.jpg);
+background-size: cover;
+        box-sizing: border-box;
+      }
+      .navbar-right {
+        display: flex;
+        width: 100%;
+         padding: 10px;
+          
+      }
 
+      .navbar-right ul {
+        width: 100%;
+          display: flex;
+  
+          text-align: center;
+
+
+      }
+
+      .navbar-right a {
+          color: blue;
+          text-decoration: none;
+       text-align: center;
+      }
+
+        .navbar-right li.dropdown {
+          width: 200px;
+       display: inline-block;
+       position: relative;
+            background-color: beige;
+            position: relative;
+            text-align: center;
+            border-radius: 5px;
+        
+            border:  solid 1px #f5b1b1;
+        }
+
+
+      .navbar-right li.dropdown .dropdown-content {
+          display: none;
+          position: absolute;
+          background-color: #f9f9f9;
+          min-width: 160px;
+          box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+          z-index: 1;
+      }
+
+      .navbar-right li.dropdown:hover .dropdown-content {
+          display: block;
+      }
+
+      .navbar-right .dropdown-content a {
+          color: black;
+       padding: 12px 16px;
+          text-decoration: none;
+          display: block;
+      }
+
+      .navbar-right .dropdown-content a:hover {
+          background-color: #dffbfc;
+      }
+
+    
+    
+
+      @media (max-width: 668px) {
+    .navbar-right {
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        position: relative;
+        top: 0;
+        left: 0;
+       align-items: center;
+        background: #fff;
+        padding: 1rem;
+        box-sizing: border-box; /* Ensuring padding is included in width calculation */
+        overflow-y: auto; /* Adding vertical scroll if content exceeds viewport height */
+    }
+
+    .navbar-right ul {
+      width: 100%;
+        flex-direction: column;
+        padding-left: 0; /* Resetting default padding for list */
+        box-sizing: border-box;
+    }
+
+    .navbar-right li.dropdown {
+        margin: 2px;
+        width: 150px;
+    }
+}
+.Pool&Spa{
+  background-color: greenyellow;
+}
+.word1{
+  background-color: rgb(55, 187, 248);
+}
+.word2{
+  background-color: thistle;
+}
+.word3{
+  background-color: aqua;
+}
+</style>
     <script
     type="text/javascript"
     src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"
@@ -23,62 +132,65 @@
     />
   </head>
   <body>
+   
     <div class="navbar">
-      <div class="logo">
-        <img src="./images/Pool&Spa Logo.png" alt="Logo" />
-        <div class="Pool&Spa">Pool&Spa by Elvizbiz</div>
-        <!-- Wrap the text in a div -->
+      <div class="logo" style="float:left">
+          <img src="./images/Pool&Spa Logo.png" alt="Logo" />
+          <p class="Pool&Spa">Pool&Spa by Elvizbiz</p>
+          <!-- Wrap the text in a div -->
       </div>
-      <ul>
-        <a href="./index.html" style="color: white">Saturation Index</a>
-        <li class="dropdown">
-          Pool Volume
-          <i class="fa fa-caret-down"></i>
-          <div class="dropdown-content">
-            <a href="./RSpoolvolune.html">Rectangle/Square</a>
-            <a href="./cpoolvolume.html">Circle</a>
-          </div>
-        </li>
-        <li class="dropdown">
-          Surface Areas
-          <i class="fa fa-caret-down"></i>
-          <div class="dropdown-content">
-            <a href="./PoolArea.html">Rectangle/Square</a>
-            <a href="./PoolArea.html">Circle</a>
-          </div>
-        </li>
+      </div>
+ 
 
-        <li class="dropdown">
-          Rates
-          <i class="fa fa-caret-down"></i>
-          <div class="dropdown-content">
-            <a href="./Rate.html">Turnover Rate</a>
-            <a href="./Rate.html">Flow Rate</a>
-            <a href="./Rate.html">Gallons lost (In)</a>
-          </div>
-        </li>
+  <div class="navbar-right">
 
-        <li class="dropdown">
-          Distance Conversion
-          <i class="fa fa-caret-down"></i>
-          <div class="dropdown-content">
-            <a href="#AreaPool">Yards to Feet</a>
-            <a href="#AreaPool1">Meters to Feet</a>
-          </div>
+      <ul><li class="dropdown">
+          <a href="./index.html" style="color: rgb(0, 8, 8)">Saturation Index</a>
         </li>
+          <li class="dropdown">
+              Pool Volume
+              <i class="fa fa-caret-down"></i>
+              <div class="dropdown-content">
+                  <a href="./RSpoolvolune.html" class="word1">Rectangle/Square</a>
+                  <a href="./cpoolvolume.html" class="word2">Circle</a>
+              </div>
+          </li>
+          <li class="dropdown">
+              Surface Areas
+              <i class="fa fa-caret-down"></i>
+              <div class="dropdown-content">
+                  <a href="./PoolArea.html" class="word2">Rectangle/Square</a>
+                  <a href="./PoolArea.html" class="word1">Circle</a>
+              </div>
+          </li>
 
-        <li>
-          <input
-            type="image"
-            class="donationbtn"
-            name="donation-btn"
-            src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif"
-            alt="Donate"
-            onclick="window.open('https://www.paypal.com/donate/?hosted_button_id=4GPXHUC5QFMDE')"
-          />
-        </li>
+          <li class="dropdown">
+              Rates
+              <i class="fa fa-caret-down"></i>
+              <div class="dropdown-content">
+                  <a href="./Rate.html" class="word1">Turnover Rate</a>
+                  <a href="./Rate.html" class="word3">Flow Rate</a>
+                  <a href="./Rate.html"class="word2">Gallons lost (In)</a>
+              </div>
+          </li>
+
+          <li class="dropdown">
+              Distance Conversion
+              <i class="fa fa-caret-down"></i>
+              <div class="dropdown-content">
+                  <a href="./distanceconversion.html" class="word1">Yards to Feet</a>
+                  <a href="./distanceconversion.html"class="word2">Meters to Feet</a>
+              </div>
+          </li>
+
+          <li id="divgr">
+            <div id="donate" onclick="window.open('https://www.paypal.com/donate/?hosted_button_id=VD3YGDBNY6CUA')"
+                    style="background-color: darkkhaki; width: 100px;">Donate!</div>
+                 
+          </li>
       </ul>
-    </div>
+  </div>
+
 
     <div class="container" id="AreaPool">
       <div>
