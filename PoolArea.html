@@ -6,103 +6,171 @@
     <link rel="stylesheet" href="./style.css" />
     <title>Pool&Spa Calculations</title>
     <style>
- body {
+ * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    }
+
+     body {
   margin: 0;
   padding: 0;
   background-image: url(./images/poolofwater.jpg);
 background-size: cover;
         box-sizing: border-box;
       }
-      .navbar-right {
-        display: flex;
-        width: 100%;
-       
-          
-      }
+      
+/* Navbar styles */
+    .navbar {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #f2f2f2;
+      padding: 10px;
+      margin: 0 auto;
+    }
 
-      .navbar-right ul {
-        width: 100%;
-          display: flex;
-          text-align: center;
-        
-       
+    .logo {
+      display: flex;
+      align-items: center;
+    }
 
+    .logo img {
+      height: 50px;
+      margin-right: 10px;
+    }
 
-      }
-
-      .navbar-right a {
-          color: blue;
-          text-decoration: none;
-       text-align: center;
-      }
-
-        .navbar-right li.dropdown {
-          width: 200px;
-       display: inline-block;
-       position: relative;
-            background-color: beige;
-            position: relative;
-            text-align: center;
-            border-radius: 5px;
-        
-            border:  solid 1px #f5b1b1;
-        }
-
-
-      .navbar-right li.dropdown .dropdown-content {
-          display: none;
-          position: absolute;
-          background-color: #f9f9f9;
-          min-width: 160px;
-          box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-          z-index: 1;
-      }
-
-      .navbar-right li.dropdown:hover .dropdown-content {
-          display: block;
-      }
-
-      .navbar-right .dropdown-content a {
-          color: black;
-       padding: 12px 16px;
-          text-decoration: none;
-          display: block;
-      }
-
-      .navbar-right .dropdown-content a:hover {
-          background-color: #dffbfc;
-      }
-
-    
-    
-
-      @media (max-width: 668px) {
     .navbar-right {
-        width: 100%;
-        flex-direction: column;
-        align-items: flex-start;
-        position: relative;
-        top: 0;
-        left: 0;
-       align-items: center;
-        background: #fff;
-        padding: 1rem;
-        box-sizing: border-box; /* Ensuring padding is included in width calculation */
-        overflow-y: auto; /* Adding vertical scroll if content exceeds viewport height */
+      display: flex;
+      align-items: center;
+      margin: 0 auto;
     }
 
     .navbar-right ul {
       width: 100%;
-        flex-direction: column;
-        padding-left: 0; /* Resetting default padding for list */
-        box-sizing: border-box;
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      background-color: #ff7809;
+      margin: 0 auto;
+      justify-content: space-evenly;
+      /* Added background color */
+      text-align: center;
     }
 
-    .navbar-right li.dropdown {
-        margin: 2px;
-        width: 150px;
+    .navbar-right li {
+      position: relative;
     }
-}
+
+    .navbar-right a {
+      display: block;
+      color: #333;
+      text-decoration: none;
+      text-align: center;
+    }
+
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+    }
+
+    .dropdown-content a {
+      color: #333;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    #divgr {
+      margin-left: 10px;
+    }
+
+    #donate {
+      cursor: pointer;
+    }
+
+    /* Responsive styles */
+    @media (max-width: 768px) {
+      .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .navbar-right {
+        margin-top: 10px;
+      }
+
+      .navbar-right ul {
+        flex-direction: column;
+      }
+
+      .dropdown-content {
+        position: static;
+        box-shadow: none;
+      }
+    }
+
+    @media (max-width: 767px) {
+      .dk-footer .footer-social-link ul {
+        text-align: center;
+      }
+
+      .dk-footer .footer-social-link ul li {
+        display: inline-block;
+        margin-right: 10px;
+      }
+
+      .dk-footer .footer-social-link ul li a {
+        font-size: 16px;
+      }
+    }
+
+    @media (min-width: 768px) and (max-width: 991px) {
+      .dk-footer .footer-social-link ul {
+        text-align: center;
+      }
+
+      .dk-footer .footer-social-link ul li {
+        display: inline-block;
+        margin-right: 15px;
+      }
+
+      .dk-footer .footer-social-link ul li a {
+        font-size: 18px;
+      }
+    }
+
+    @media (min-width: 992px) {
+      .dk-footer .footer-social-link ul {
+        text-align: center;
+      }
+
+      .dk-footer .footer-social-link ul li {
+        display: inline-block;
+        margin-right: 20px;
+      }
+
+      .dk-footer .footer-social-link ul li a {
+        font-size: 20px;
+      }
+    }
+
+
+
 h3{
   background-color: greenyellow;
   color: #000;
@@ -116,6 +184,17 @@ h3{
 .word3{
   background-color: aqua;
 }
+#CAreaPool,#RSAreaPool {
+      width: 50%;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    @media (max-width: 768px) {
+      #CAreaPool,#RSAreaPool{
+        width: 80%;
+      }
+    }
     </style>
     <script
     type="text/javascript"

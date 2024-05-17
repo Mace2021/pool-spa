@@ -2,8 +2,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font:bold 1em Arial, sans-serif;
-}
+  
+
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    }
 
 .Pool&Spa{
   background-color: greenyellow;
@@ -29,13 +32,14 @@ img{
   padding: 5px;
 }
 .container {
+  width: 80%;
   position: relative;
   background-color: #020c2e;
   color: #fcfbfb;
   display: block;
   justify-content: center;
   align-items: center;
-  margin: auto;
+  margin: 0 auto;
 
   font-size: 2rem;
   box-shadow: 2px 4px 5px 0 #bdbdbd;
@@ -94,8 +98,11 @@ button {
   font-weight: bold;
   margin-top: 10px;
   font-size: 1.6rem; /* Adjust font size for better readability */
+margin: 0 auto;
+
 }
-iframe{
+
+iframe {
   position: relative;
   background-color: #020c2e;
   color: #fcfbfb;
@@ -103,42 +110,24 @@ iframe{
   justify-content: center;
   align-items: center;
   margin: auto;
-
-  font-size: 2rem;
+  width: 100%;
+  max-width: 800px;
+  /* Set a maximum width for larger screens */
+  font-size: 2.5rem;
+  font-weight: bolder;
   box-shadow: 2px 4px 5px 0 #bdbdbd;
   box-sizing: border-box;
   border-radius: 15px;
   border: solid rgb(12, 12, 12);
 }
 
-
-footer {
-  display: flex;
-  box-sizing: border-box;
-  margin-top: 0px;
-  width: 100%;
-  padding: 5px;
-  height: auto;
-  background-color: #b4f72d;
-  font-size: x-large;
-  color: #23211e;
+footer{
+  background-color: #95fc1f;
+display: flex;
+justify-content: center;
+text-align: center;
 }
-ul {
-  display: flex;
-  list-style: none;
-  justify-content: space-evenly;
-  margin-left: 30px;
-  justify-content: center;
-}
-li {
-  margin: 25px;
-  justify-items: center;
-}
-
-/* Media query for screens with a max width of 768px */
-@media screen and (max-width: 768px) {
-  .container {
-    width: 95%;
-    font-size: 1.4rem; /* Slightly reduce font size for smaller screens */
-  }
+ul, li{
+  font-weight: bolder;
+  margin: 5px;
 }
