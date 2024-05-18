@@ -111,8 +111,7 @@ iframe {
   align-items: center;
   margin: auto;
   width: 100%;
-  max-width: 800px;
-  /* Set a maximum width for larger screens */
+height: 12vh;
   font-size: 2.5rem;
   font-weight: bolder;
   box-shadow: 2px 4px 5px 0 #bdbdbd;
@@ -120,7 +119,6 @@ iframe {
   border-radius: 15px;
   border: solid rgb(12, 12, 12);
 }
-
 footer{
   background-color: #95fc1f;
 display: flex;
