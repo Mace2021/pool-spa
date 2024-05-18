@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!-- HTML -->
+
+<body>
+    <div class="calculator">
+        <input type="text" class="display" disabled>
+        <div class="buttons">
+            <button class="btn">7</button>
+            <button class="btn">8</button>
+            <button class="btn">9</button>
+            <button class="btn operator">+</button>
+            <button class="btn">4</button>
+            <button class="btn">5</button>
+            <button class="btn">6</button>
+            <button class="btn operator">-</button>
+            <button class="btn">1</button>
+            <button class="btn">2</button>
+            <button class="btn">3</button>
+            <button class="btn operator">*</button>
+            <button class="btn">0</button>
+            <button class="btn">.</button>
+            <button class="btn operator">/</button>
+            <button class="btn clear">C</button>
+            <button class="btn equals">=</button>
+        </div>
+    </div>
+
+    <!-- CSS -->
+    <style>
+        .calculator {
+            width: 200px;
+            margin: 0 auto;
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 0 auto;
+        }
+
+        .display {
+            width:185px;
+            margin-bottom: 10px;
+            padding: 5px;
+            font-size: 16px;
+            text-align: right;
+            margin: 0 auto;
+        }
+
+        .buttons {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 5px;
+        }
+
+        .btn {
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        .operator {
+            background-color: #f0ad4e;
+            color: white;
+        }
+
+        .clear {
+            background-color: #d9534f;
+            color: white;
+        }
+
+        .equals {
+            background-color: #5cb85c;
+            color: white;
+        }
+    </style>
+
+    <!-- JavaScript -->
+    <script>
+        const display = document.querySelector('.display');
+        const buttons = document.querySelectorAll('.btn');
+        let currentValue = '';
+        let prevValue = '';
+        let operator = '';
+
+        buttons.forEach(button => {
+            button.addEventListener('click', () => {
+                const value = button.textContent;
+
+                if (value === 'C') {
+                    currentValue = '';
+                    prevValue = '';
+                    operator = '';
+                    display.value = '';
+                } else if (value === '=') {
+                    const result = calculate(prevValue, currentValue, operator);
+                    display.value = result;
+                    currentValue = result;
+                    prevValue = '';
+                    operator = '';
+                } else if (['+', '-', '*', '/'].includes(value)) {
+                    operator = value;
+                    prevValue = currentValue;
+                    currentValue = '';
+                } else {
+                    currentValue += value;
+                    display.value = currentValue;
+                }
+            });
+        });
+
+        function calculate(a, b, op) {
+            a = parseFloat(a);
+            b = parseFloat(b);
+
+            switch (op) {
+                case '+':
+                    return a + b;
+                case '-':
+                    return a - b;
+                case '*':
+                    return a * b;
+                case '/':
+                    return a / b;
+                default:
+                    return 0;
+            }
+        }
+    </script>
+</body>
+
+</html>

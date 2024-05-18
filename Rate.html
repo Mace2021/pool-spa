@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="./style.css" />
     <title>Pool&Spa Calculations</title>
     <style>
-      * {
+     * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -171,7 +171,7 @@ background-size: cover;
 
 
 
-
+     
 
 h3{
   background-color: greenyellow;
@@ -186,18 +186,21 @@ h3{
 .word3{
   background-color: aqua;
 }
-#PoolRate, #PoolRate1,#PoolRate2 {
+
+    #SaturationIndex {
       width: 50%;
       margin: 0 auto;
       text-align: center;
     }
 
     @media (max-width: 768px) {
-      #PoolRate, #PoolRate1,#PoolRate2 {
+      #SaturationIndex {
         width: 80%;
       }
     }
-    </style>
+
+  </style>
+    <!-- Add Bootstrap JS and Popper.js (required for dropdown functionality) -->
     <script
     type="text/javascript"
     src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"
@@ -206,11 +209,7 @@ h3{
 <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
-/>
-    <!-- Add Bootstrap JS and Popper.js (required for dropdown functionality) -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
-   
+/><script src="./script.js"></script>
 
     <!-- Add Bootstrap CSS -->
     <link
@@ -219,64 +218,72 @@ h3{
     />
   </head>
   <body>
-   
+  
     <div class="navbar">
-      <div class="logo" style="float:left">
-          <img src="./images/Pool&Spa Logo.png" alt="Logo" />
-          <h3 id="Pool&Spa">Pool&Spa by Elvizbiz</h3>
-          <!-- Wrap the text in a div -->
-      </div>
-      </div>
- 
+        <div class="logo" style="float:left">
+            <img src="./images/Pool&Spa Logo.png" alt="Logo" />
+            <h3 id="Pool&Spa">Pool&Spa by Elvizbiz</h3>
+            <!-- Wrap the text in a div -->
+        </div>
+        </div>
+   
 
-  <div class="navbar-right">
+    <div class="navbar-right">
 
-      <ul><li class="dropdown">
-          <a href="./index.html" style="color: rgb(0, 8, 8)">Saturation Index</a>
-        </li>
-          <li class="dropdown">
-              Pool Volume
+        <ul><li class="dropdown">
+            <a href="./index.html" style="color: rgb(0, 8, 8)">Saturation Index</a>
+          </li>
+            <li class="dropdown">
+                Pool Volume
+                <i class="fa fa-caret-down"></i>
+                <div class="dropdown-content">
+                    <a href="./RSpoolvolune.html" class="word1">Rectangle/Square</a>
+                    <a href="./cpoolvolume.html" class="word2">Circle</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                Surface Areas
+                <i class="fa fa-caret-down"></i>
+                <div class="dropdown-content">
+                    <a href="./PoolArea.html" class="word2">Rectangle/Square</a>
+                    <a href="./PoolArea.html" class="word1">Circle</a>
+                </div>
+            </li>
+
+            <li class="dropdown">
+                Rates
+                <i class="fa fa-caret-down"></i>
+                <div class="dropdown-content">
+                    <a href="./Rate.html" class="word1">Turnover Rate</a>
+                    <a href="./Rate.html" class="word3">Flow Rate</a>
+                    <a href="./Rate.html"class="word2">Gallons lost (In)</a>
+                </div>
+            </li>
+
+            <li class="dropdown">
+                Distance Conversion
+                <i class="fa fa-caret-down"></i>
+                <div class="dropdown-content">
+                    <a href="./distanceconversion.html" class="word1">Yards to Feet</a>
+                    <a href="./distanceconversion.html"class="word2">Meters to Feet</a>
+                </div>
+            </li>
+            <li class="dropdown">
+              Calculator
               <i class="fa fa-caret-down"></i>
               <div class="dropdown-content">
-                  <a href="./RSpoolvolune.html" class="word1">Rectangle/Square</a>
-                  <a href="./cpoolvolume.html" class="word2">Circle</a>
+                  <a href="./cal.html" class="word1">Calculator</a>
+                  
               </div>
           </li>
-          <li class="dropdown">
-              Surface Areas
-              <i class="fa fa-caret-down"></i>
-              <div class="dropdown-content">
-                  <a href="./PoolArea.html" class="word2">Rectangle/Square</a>
-                  <a href="./PoolArea.html" class="word1">Circle</a>
-              </div>
-          </li>
-
-          <li class="dropdown">
-              Rates
-              <i class="fa fa-caret-down"></i>
-              <div class="dropdown-content">
-                  <a href="#PoolRate" class="word1">Turnover Rate</a>
-                  <a href="#PoolRate1" class="word3">Flow Rate</a>
-                  <a href="#PoolRate2"class="word2">Gallons lost (In)</a>
-              </div>
-          </li>
-
-          <li class="dropdown">
-              Distance Conversion
-              <i class="fa fa-caret-down"></i>
-              <div class="dropdown-content">
-                  <a href="./distanceconversion.html" class="word1">Yards to Feet</a>
-                  <a href="./distanceconversion.html"class="word2">Meters to Feet</a>
-              </div>
-          </li>
-
-          <li id="divgr">
-            <div id="donate" onclick="window.open('https://www.paypal.com/donate/?hosted_button_id=VD3YGDBNY6CUA')"
-           >Donate!</div>
-                 
-          </li>
-      </ul>
-  </div>
+            <li id="divgr">
+              <div id="donate" onclick="window.open('https://www.paypal.com/donate/?hosted_button_id=VD3YGDBNY6CUA')"
+              >Donate!
+            </div>
+                   
+            </li>
+        </ul>
+    </div>
 
 
     <div class="container" id="PoolRate" >
